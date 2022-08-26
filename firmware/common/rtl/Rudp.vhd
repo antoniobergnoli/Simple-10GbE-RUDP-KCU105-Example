@@ -258,18 +258,18 @@ begin
    -- Xilinx Virtual Cable (XVC)
    -- https://www.xilinx.com/products/intellectual-property/xvc.html
    -----------------------------------------------------------------
-   U_XVC : entity surf.UdpDebugBridgeWrapper
-      generic map (
-         TPD_G => TPD_G)
-      port map (
-         -- Clock and Reset
-         clk            => ethClk,
-         rst            => ethRst,
-         -- UDP XVC Interface
-         obServerMaster => obServerMasters(UDP_SRV_XVC_IDX_C),
-         obServerSlave  => obServerSlaves(UDP_SRV_XVC_IDX_C),
-         ibServerMaster => ibServerMasters(UDP_SRV_XVC_IDX_C),
-         ibServerSlave  => ibServerSlaves(UDP_SRV_XVC_IDX_C));
+   -- U_XVC : entity surf.UdpDebugBridgeWrapper
+   --    generic map (
+   --       TPD_G => TPD_G)
+   --    port map (
+   --       -- Clock and Reset
+   --       clk            => ethClk,
+   --       rst            => ethRst,
+   --       -- UDP XVC Interface
+   --       obServerMaster => obServerMasters(UDP_SRV_XVC_IDX_C),
+   --       obServerSlave  => obServerSlaves(UDP_SRV_XVC_IDX_C),
+   --       ibServerMaster => ibServerMasters(UDP_SRV_XVC_IDX_C),
+   --       ibServerSlave  => ibServerSlaves(UDP_SRV_XVC_IDX_C));
 
    GEN_VEC :
    for i in 0 to 1 generate

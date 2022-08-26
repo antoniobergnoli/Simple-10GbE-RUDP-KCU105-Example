@@ -170,7 +170,7 @@ begin
       port map (
          clk => clk,
          rst => rst,
-         o   => Heartbeat);
+         o   => heartbeat);
 
    GEN_ETH : if (SIMULATION_G = false) generate
 
@@ -368,18 +368,18 @@ begin
       --------------------------
       -- AXI-Lite: SYSMON Module
       --------------------------
-      U_SysMon : entity work.Sysmon
-         generic map (
-            TPD_G => TPD_G)
-         port map (
-            axiReadMaster  => axilReadMasters(SYS_MON_INDEX_C),
-            axiReadSlave   => axilReadSlaves(SYS_MON_INDEX_C),
-            axiWriteMaster => axilWriteMasters(SYS_MON_INDEX_C),
-            axiWriteSlave  => axilWriteSlaves(SYS_MON_INDEX_C),
-            axiClk         => clk,
-            axiRst         => rst,
-            vPIn           => vPIn,
-            vNIn           => vNIn);
+      -- U_SysMon : entity work.Sysmon
+      --    generic map (
+      --       TPD_G => TPD_G)
+      --    port map (
+      --       axiReadMaster  => axilReadMasters(SYS_MON_INDEX_C),
+      --       axiReadSlave   => axilReadSlaves(SYS_MON_INDEX_C),
+      --       axiWriteMaster => axilWriteMasters(SYS_MON_INDEX_C),
+      --       axiWriteSlave  => axilWriteSlaves(SYS_MON_INDEX_C),
+      --       axiClk         => clk,
+      --       axiRst         => rst,
+      --       vPIn           => vPIn,
+      --       vNIn           => vNIn);
 
       -----------------------------------------
       -- TCA9548APWR I2C MUX + AxiLite Crossbar
