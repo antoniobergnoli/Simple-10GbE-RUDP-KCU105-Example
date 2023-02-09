@@ -261,6 +261,8 @@ begin
          TPD_G              => TPD_G,
          NUM_SLAVE_SLOTS_G  => 1,
          NUM_MASTER_SLOTS_G => NUM_AXIL_MASTERS_C,
+
+         DEBUG_G            => true,
          MASTERS_CONFIG_G   => XBAR_CONFIG_C)
       port map (
          sAxiWriteMasters(0) => mAxilWriteMaster,
